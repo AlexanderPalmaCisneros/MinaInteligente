@@ -1,0 +1,19 @@
+# Symlinks a Obsidian (no versionar contenido externo)
+requisitos
+cambios
+
+# Visual Studio / .NET
+**/bin/
+**/obj/
+**/.vs/
+*.user
+*.suo
+**/x64/
+**/Debug/
+**/Release/
+
+# Archivos temporales
+*.tmp
+
+notepad .gitignore
+CLAUDE.md
