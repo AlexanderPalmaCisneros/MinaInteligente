@@ -123,6 +123,36 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Administrador.h" />
+    <ClInclude Include="Alarma.h" />
+    <ClInclude Include="ConfiguracionSistema.h" />
+    <ClInclude Include="Dispositivo.h" />
+    <ClInclude Include="EstadoDispositivo.h" />
+    <ClInclude Include="EstadoRecomendacion.h" />
+    <ClInclude Include="EstadoVentilador.h" />
+    <ClInclude Include="FuenteDatos.h" />
+    <ClInclude Include="FuenteDatosReal.h" />
+    <ClInclude Include="FuenteDatosSimulada.h" />
+    <ClInclude Include="GeneradorReportes.h" />
+    <ClInclude Include="GrafoZonas.h" />
+    <ClInclude Include="HistorialExposicion.h" />
+    <ClInclude Include="LectorRFID.h" />
+    <ClInclude Include="ModoOperacion.h" />
+    <ClInclude Include="NivelRiesgo.h" />
+    <ClInclude Include="OrigenAlarma.h" />
+    <ClInclude Include="RecomendacionTurno.h" />
+    <ClInclude Include="RegistroExposicion.h" />
+    <ClInclude Include="RolUsuario.h" />
+    <ClInclude Include="SensorGas.h" />
+    <ClInclude Include="SistemaMonitoreo.h" />
+    <ClInclude Include="Supervisor.h" />
+    <ClInclude Include="TipoGas.h" />
+    <ClInclude Include="TipoRecomendacion.h" />
+    <ClInclude Include="TipoRiesgo.h" />
+    <ClInclude Include="Trabajador.h" />
+    <ClInclude Include="Usuario.h" />
+    <ClInclude Include="Ventilador.h" />
+    <ClInclude Include="Zona.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

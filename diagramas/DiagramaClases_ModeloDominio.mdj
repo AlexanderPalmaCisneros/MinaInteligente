@@ -1608,34 +1608,6 @@
 								},
 								{
 									"_type": "UMLAssociation",
-									"_id": "AAAAAAGgobqOxH29krI=",
-									"_parent": {
-										"$ref": "4dedf873af774ba49c1ecd488199eb26"
-									},
-									"end1": {
-										"_type": "UMLAssociationEnd",
-										"_id": "AAAAAAGgobqOxH2+K3k=",
-										"_parent": {
-											"$ref": "AAAAAAGgobqOxH29krI="
-										},
-										"reference": {
-											"$ref": "4dedf873af774ba49c1ecd488199eb26"
-										}
-									},
-									"end2": {
-										"_type": "UMLAssociationEnd",
-										"_id": "AAAAAAGgobqOxH2/5Ks=",
-										"_parent": {
-											"$ref": "AAAAAAGgobqOxH29krI="
-										},
-										"reference": {
-											"$ref": "800efc25a7b94dce9f65b6d7c293a0af"
-										},
-										"aggregation": "composite"
-									}
-								},
-								{
-									"_type": "UMLAssociation",
 									"_id": "AAAAAAGgocJ5h6c1K5Q=",
 									"_parent": {
 										"$ref": "4dedf873af774ba49c1ecd488199eb26"
