@@ -18693,35 +18693,6 @@
 								"$ref": "ba9434e3d2a4480b97079f3e3f11a7e0"
 							},
 							"name": "SistemaMonitoreo",
-							"ownedElements": [
-								{
-									"_type": "UMLAssociation",
-									"_id": "AAAAAAGgoH9R0e0vrm0=",
-									"_parent": {
-										"$ref": "AAAAAAGgnMVCHGPz144="
-									},
-									"end1": {
-										"_type": "UMLAssociationEnd",
-										"_id": "AAAAAAGgoH9R0e0wp2s=",
-										"_parent": {
-											"$ref": "AAAAAAGgoH9R0e0vrm0="
-										},
-										"reference": {
-											"$ref": "AAAAAAGgnMVCHGPz144="
-										}
-									},
-									"end2": {
-										"_type": "UMLAssociationEnd",
-										"_id": "AAAAAAGgoH9R0e0xFSk=",
-										"_parent": {
-											"$ref": "AAAAAAGgoH9R0e0vrm0="
-										},
-										"reference": {
-											"$ref": "f10b81d4a63c41edb5881100867dc714"
-										}
-									}
-								}
-							],
 							"attributes": [
 								{
 									"_type": "UMLAttribute",
@@ -19050,7 +19021,8 @@
 											"_parent": {
 												"$ref": "AAAAAAGgonwPGR+S/x4="
 											},
-											"name": "id"
+											"name": "id",
+											"type": ""
 										},
 										{
 											"_type": "UMLParameter",
@@ -19058,7 +19030,8 @@
 											"_parent": {
 												"$ref": "AAAAAAGgonwPGR+S/x4="
 											},
-											"name": "nombre"
+											"name": "nombre",
+											"type": ""
 										},
 										{
 											"_type": "UMLParameter",
@@ -19066,7 +19039,8 @@
 											"_parent": {
 												"$ref": "AAAAAAGgonwPGR+S/x4="
 											},
-											"name": "simbolo"
+											"name": "simbolo",
+											"type": ""
 										},
 										{
 											"_type": "UMLParameter",
@@ -19074,7 +19048,8 @@
 											"_parent": {
 												"$ref": "AAAAAAGgonwPGR+S/x4="
 											},
-											"name": "generacionGasDefault"
+											"name": "generacionGasDefault",
+											"type": ""
 										}
 									]
 								}
