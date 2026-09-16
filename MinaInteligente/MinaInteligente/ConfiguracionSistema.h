@@ -11,7 +11,9 @@ namespace MinaInteligente {
     public ref class ConfiguracionSistema
     {
     private:
-        static ConfiguracionSistema^ instancia;
+        // En C++/CLI los campos static de un ref class deben inicializarse
+        // en la propia definicion de la clase, no en el .cpp.
+        static ConfiguracionSistema^ instancia = nullptr;
 
         double umbralActivacion;
         double umbralDesactivacion;

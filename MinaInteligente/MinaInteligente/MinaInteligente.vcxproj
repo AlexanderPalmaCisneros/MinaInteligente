@@ -154,6 +154,30 @@
     <ClInclude Include="Ventilador.h" />
     <ClInclude Include="Zona.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MinaInteligente.cpp" />
+    <ClCompile Include="Administrador.cpp" />
+    <ClCompile Include="Alarma.cpp" />
+    <ClCompile Include="ConfiguracionSistema.cpp" />
+    <ClCompile Include="Dispositivo.cpp" />
+    <ClCompile Include="FuenteDatos.cpp" />
+    <ClCompile Include="FuenteDatosReal.cpp" />
+    <ClCompile Include="FuenteDatosSimulada.cpp" />
+    <ClCompile Include="GeneradorReportes.cpp" />
+    <ClCompile Include="GrafoZonas.cpp" />
+    <ClCompile Include="HistorialExposicion.cpp" />
+    <ClCompile Include="LectorRFID.cpp" />
+    <ClCompile Include="RecomendacionTurno.cpp" />
+    <ClCompile Include="RegistroExposicion.cpp" />
+    <ClCompile Include="SensorGas.cpp" />
+    <ClCompile Include="SistemaMonitoreo.cpp" />
+    <ClCompile Include="Supervisor.cpp" />
+    <ClCompile Include="TipoGas.cpp" />
+    <ClCompile Include="Trabajador.cpp" />
+    <ClCompile Include="Usuario.cpp" />
+    <ClCompile Include="Ventilador.cpp" />
+    <ClCompile Include="Zona.cpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
