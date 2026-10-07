@@ -153,6 +153,8 @@
     <ClCompile Include="frmSensorGasDatos.cpp" />
     <ClCompile Include="frmUmbralDatos.cpp" />
     <ClCompile Include="frmElegirTipo.cpp" />
+    <ClCompile Include="frmGrafoZonas.cpp" />
+    <ClCompile Include="panelSupervisor.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="panelAdministrador.cpp" />
   </ItemGroup>
@@ -223,6 +225,12 @@
     <ClInclude Include="frmElegirTipo.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="frmGrafoZonas.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="panelSupervisor.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Utilidades.h" />
   </ItemGroup>
   <ItemGroup>
@@ -291,6 +299,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmElegirTipo.resx">
       <DependentUpon>frmElegirTipo.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGrafoZonas.resx">
+      <DependentUpon>frmGrafoZonas.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="panelSupervisor.resx">
+      <DependentUpon>panelSupervisor.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

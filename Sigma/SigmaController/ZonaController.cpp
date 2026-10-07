@@ -2,6 +2,7 @@
 #include "ZonaController.h"
 #include "Validaciones.h"
 #include "DispositivoController.h"
+#include "GrafoZonasController.h"
 
 using namespace SigmaController;
 using namespace SigmaDAO;
@@ -84,6 +85,10 @@ String^ ZonaController::EliminarZona(String^ id) {
 		if (d->GetZonaAsociada() != nullptr && UtilDAO::Igual(d->GetZonaAsociada()->GetId(), id)) {
 			return "No se puede eliminar: el dispositivo " + d->GetId() + " pertenece a esta zona. Reasígnelo o elimínelo primero.";
 		}
+	}
+	GrafoZonasController^ grafoController = gcnew GrafoZonasController();
+	if (grafoController->EstaEnGrafo(id)) {
+		return "No se puede eliminar: la zona está en el grafo de zonas. El supervisor debe quitarla primero del grafo.";
 	}
     if (!dao->EliminarZona(id)) {
         return "No existe una zona con el id " + id + ".";

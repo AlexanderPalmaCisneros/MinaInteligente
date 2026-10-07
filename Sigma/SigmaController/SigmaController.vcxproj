@@ -146,6 +146,7 @@
     <ClInclude Include="Validaciones.h" />
     <ClInclude Include="DispositivoController.h" />
     <ClInclude Include="ConfiguracionController.h" />
+    <ClInclude Include="GrafoZonasController.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
@@ -167,6 +168,7 @@
     <ClCompile Include="ZonaController.cpp" />
     <ClCompile Include="DispositivoController.cpp" />
     <ClCompile Include="ConfiguracionController.cpp" />
+    <ClCompile Include="GrafoZonasController.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc" />

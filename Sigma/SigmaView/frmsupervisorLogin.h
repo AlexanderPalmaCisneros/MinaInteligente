@@ -1,5 +1,6 @@
 ﻿
 #pragma once
+#include "panelSupervisor.h"
 
 
 namespace SigmaView {
@@ -185,10 +186,14 @@ namespace SigmaView {
 			return;
 		}
 
-		// El panel del supervisor todavia no existe: por ahora solo se verifica el acceso
-		MessageBox::Show("Bienvenido, " + supervisor->GetNombre() + ".\n\nEl panel del supervisor aún está en desarrollo.",
-			"Sigma", MessageBoxButtons::OK, MessageBoxIcon::Information);
-		this->textBox2->Clear();
+		panelSupervisor^ panel = gcnew panelSupervisor(supervisor->GetNombre());
+		/*Se abre como hijo del formulario principal (ventana MDI)*/
+		System::Windows::Forms::Form^ contenedor = this->MdiParent;
+		if (contenedor != nullptr && contenedor->IsMdiContainer) {
+			panel->MdiParent = contenedor;
+		}
+		panel->Show();
+		this->Close();
 	}
 	};
 }

@@ -11,9 +11,102 @@ GrafoZonas::GrafoZonas()
     this->zonas = gcnew List<Zona^>();
 }
 
-void GrafoZonas::AgregarZona(Zona^ zona)
+bool GrafoZonas::AgregarZonaSalida(Zona^ zona)
 {
+    if (zona == nullptr || this->zonas->Count > 0)
+    {
+        return false;
+    }
+    zona->UbicarEn(nullptr, CaraZona::DERECHA, 0, 0);
+    zona->SetEsZonaSalida(true);
     this->zonas->Add(zona);
+    return true;
+}
+
+bool GrafoZonas::AgregarZona(Zona^ nueva, Zona^ padre, CaraZona cara)
+{
+    if (nueva == nullptr || padre == nullptr || !this->ContieneZona(padre) || this->ContieneZona(nueva))
+    {
+        return false;
+    }
+
+    // La celda depende de la cara elegida; la izquierda siempre queda como union hacia la salida
+    int fila = padre->GetFila();
+    int columna = padre->GetColumna();
+    if (cara == CaraZona::ARRIBA)
+    {
+        fila = fila - 1;
+    }
+    else if (cara == CaraZona::ABAJO)
+    {
+        fila = fila + 1;
+    }
+    else
+    {
+        columna = columna + 1;
+    }
+
+    if (this->ObtenerZonaEn(fila, columna) != nullptr)
+    {
+        return false;
+    }
+
+    nueva->UbicarEn(padre, cara, fila, columna);
+    // Conexion dirigida hacia la salida: asi ObtenerRutaEscape siempre la encuentra
+    nueva->ConectarCon(padre);
+    this->zonas->Add(nueva);
+    return true;
+}
+
+bool GrafoZonas::QuitarZona(Zona^ zona)
+{
+    if (!this->ContieneZona(zona) || this->ObtenerHijas(zona)->Count > 0)
+    {
+        return false;
+    }
+
+    Zona^ padre = zona->GetZonaPadre();
+    if (padre != nullptr)
+    {
+        zona->ObtenerConexiones()->Remove(padre);
+    }
+    else
+    {
+        zona->SetEsZonaSalida(false);
+    }
+    zona->UbicarEn(nullptr, CaraZona::DERECHA, 0, 0);
+    this->zonas->Remove(zona);
+    return true;
+}
+
+Zona^ GrafoZonas::ObtenerZonaEn(int fila, int columna)
+{
+    for each (Zona ^ zona in this->zonas)
+    {
+        if (zona->GetFila() == fila && zona->GetColumna() == columna)
+        {
+            return zona;
+        }
+    }
+    return nullptr;
+}
+
+List<Zona^>^ GrafoZonas::ObtenerHijas(Zona^ zona)
+{
+    List<Zona^>^ hijas = gcnew List<Zona^>();
+    for each (Zona ^ otra in this->zonas)
+    {
+        if (otra->GetZonaPadre() == zona)
+        {
+            hijas->Add(otra);
+        }
+    }
+    return hijas;
+}
+
+bool GrafoZonas::ContieneZona(Zona^ zona)
+{
+    return zona != nullptr && this->zonas->Contains(zona);
 }
 
 List<Zona^>^ GrafoZonas::ObtenerZonas()

@@ -144,6 +144,7 @@
     <ClInclude Include="VentiladorDAO.h" />
     <ClInclude Include="ZonaDAO.h" />
     <ClInclude Include="UtilDAO.h" />
+    <ClInclude Include="GrafoZonasDAO.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
@@ -163,6 +164,7 @@
     <ClCompile Include="TrabajadorDAO.cpp" />
     <ClCompile Include="VentiladorDAO.cpp" />
     <ClCompile Include="ZonaDAO.cpp" />
+    <ClCompile Include="GrafoZonasDAO.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc" />

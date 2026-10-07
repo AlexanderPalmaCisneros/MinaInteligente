@@ -1,0 +1,6 @@
+zona01;;;0;0
+12;zona01;DERECHA;0;1
+121;12;ARRIBA;-1;1
+zona03;12;DERECHA;0;2
+zona02;zona03;DERECHA;0;3
+zona04;zona02;DERECHA;0;4

@@ -163,6 +163,7 @@
     <ClInclude Include="Usuario.h" />
     <ClInclude Include="Ventilador.h" />
     <ClInclude Include="Zona.h" />
+    <ClInclude Include="CaraZona.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Administrador.cpp" />

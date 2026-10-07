@@ -2,6 +2,8 @@
 
 #include "Dispositivo.h"
 #include "TipoRiesgo.h"
+#include "NivelRiesgo.h"
+#include "CaraZona.h"
 
 using namespace System;
 using namespace System::Collections::Generic;
@@ -24,6 +26,11 @@ namespace SigmaModel {
 		double concentracionActual;
 		bool esZonaSalida;
 		TipoRiesgo tipoRiesgoActual;
+		// Ubicacion en el grafo: zona de la que cuelga, por cual de sus caras y celda (fila, columna)
+		Zona^ zonaPadre;
+		CaraZona caraConexion;
+		int fila;
+		int columna;
 
 	public:
 		Zona();
@@ -60,6 +67,16 @@ namespace SigmaModel {
 
 		void SetVolumen(double nuevoVolumen);//AGREGADO
 		bool QuitarDispositivo(String^ idDispositivo);
+
+		/*Nivel de emergencia segun los umbrales de ConfiguracionSistema (BAJO, MEDIO, ALTO, CRITICO)*/
+		NivelRiesgo EvaluarNivelRiesgo();
+
+		/*Guarda la ubicacion de la zona en el grafo (padre nullptr = zona de salida)*/
+		void UbicarEn(Zona^ padre, CaraZona cara, int fila, int columna);
+		Zona^ GetZonaPadre();
+		CaraZona GetCaraConexion();
+		int GetFila();
+		int GetColumna();
 	
 	};
 }

@@ -16,6 +16,10 @@ Zona::Zona()
 	this->concentracionActual = 0.0;
 	this->esZonaSalida = false;
 	this->tipoRiesgoActual = TipoRiesgo::NINGUNO;
+	this->zonaPadre = nullptr;
+	this->caraConexion = CaraZona::DERECHA;
+	this->fila = 0;
+	this->columna = 0;
 }
 
 Zona::Zona(String^ id, String^ nombre, double volumen)
@@ -29,6 +33,10 @@ Zona::Zona(String^ id, String^ nombre, double volumen)
 	this->concentracionActual = 0.0;
 	this->esZonaSalida = false;
 	this->tipoRiesgoActual = TipoRiesgo::NINGUNO;
+	this->zonaPadre = nullptr;
+	this->caraConexion = CaraZona::DERECHA;
+	this->fila = 0;
+	this->columna = 0;
 }
 
 void Zona::ActualizarConcentracion()
@@ -154,4 +162,47 @@ bool Zona::QuitarDispositivo(String^ idDispositivo)
 		}
 	}
 	return false;
+}
+
+NivelRiesgo Zona::EvaluarNivelRiesgo()
+{
+	ConfiguracionSistema^ configuracion = ConfiguracionSistema::ObtenerInstancia();
+	if (this->concentracionActual >= configuracion->GetUmbralCritico()) {
+		return NivelRiesgo::CRITICO;
+	}
+	if (this->concentracionActual >= configuracion->GetUmbralActivacion()) {
+		return NivelRiesgo::ALTO;
+	}
+	if (this->concentracionActual >= configuracion->GetUmbralDesactivacion()) {
+		return NivelRiesgo::MEDIO;
+	}
+	return NivelRiesgo::BAJO;
+}
+
+void Zona::UbicarEn(Zona^ padre, CaraZona cara, int fila, int columna)
+{
+	this->zonaPadre = padre;
+	this->caraConexion = cara;
+	this->fila = fila;
+	this->columna = columna;
+}
+
+Zona^ Zona::GetZonaPadre()
+{
+	return this->zonaPadre;
+}
+
+CaraZona Zona::GetCaraConexion()
+{
+	return this->caraConexion;
+}
+
+int Zona::GetFila()
+{
+	return this->fila;
+}
+
+int Zona::GetColumna()
+{
+	return this->columna;
 }
