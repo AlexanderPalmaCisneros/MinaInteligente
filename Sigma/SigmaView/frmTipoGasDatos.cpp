@@ -1,0 +1,2 @@
+#include "frmTipoGasDatos.h"
+

@@ -1,0 +1,10 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="SigmaController/SigmaController.vcxproj" />
+  <Project Path="SigmaDAO/SigmaDAO.vcxproj" />
+  <Project Path="SigmaModel/SigmaModel.vcxproj" />
+  <Project Path="SigmaView/SigmaView.vcxproj" />
+</Solution>

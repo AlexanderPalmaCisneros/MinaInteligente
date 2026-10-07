@@ -1,0 +1,2 @@
+#include "frmElegirTipo.h"
+

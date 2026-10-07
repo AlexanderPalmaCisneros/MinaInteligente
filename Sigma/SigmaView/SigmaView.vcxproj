@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>18.0</VCProjectVersion>
+    <ProjectGuid>{E81B2BBF-607E-0AE3-FBDD-842FC9DFFC1F}</ProjectGuid>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <Keyword>ManagedCProj</Keyword>
+    <RootNamespace>SigmaView</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Manifest>
+      <EnableSegmentHeap>true</EnableSegmentHeap>
+    </Manifest>
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Manifest>
+      <EnableSegmentHeap>true</EnableSegmentHeap>
+    </Manifest>
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Manifest>
+      <EnableSegmentHeap>true</EnableSegmentHeap>
+    </Manifest>
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies />
+      <EntryPointSymbol>main</EntryPointSymbol>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Manifest>
+      <EnableSegmentHeap>true</EnableSegmentHeap>
+    </Manifest>
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="frmadministradorLogin.cpp" />
+    <ClCompile Include="frmPrincipal.cpp" />
+    <ClCompile Include="frmsupervisorLogin.cpp" />
+    <ClCompile Include="frmMantZonas.cpp" />
+    <ClCompile Include="frmMantTrabajadores.cpp" />
+    <ClCompile Include="frmMantSupervisores.cpp" />
+    <ClCompile Include="frmMantAdministradores.cpp" />
+    <ClCompile Include="frmMantTiposGas.cpp" />
+    <ClCompile Include="frmMantUmbrales.cpp" />
+    <ClCompile Include="frmMantDispositivos.cpp" />
+    <ClCompile Include="frmZonaDatos.cpp" />
+    <ClCompile Include="frmTrabajadorDatos.cpp" />
+    <ClCompile Include="frmSupervisorDatos.cpp" />
+    <ClCompile Include="frmAdministradorDatos.cpp" />
+    <ClCompile Include="frmTipoGasDatos.cpp" />
+    <ClCompile Include="frmLEDDatos.cpp" />
+    <ClCompile Include="frmVentiladorDatos.cpp" />
+    <ClCompile Include="frmLectorRFIDDatos.cpp" />
+    <ClCompile Include="frmSensorGasDatos.cpp" />
+    <ClCompile Include="frmUmbralDatos.cpp" />
+    <ClCompile Include="frmElegirTipo.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="panelAdministrador.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="frmadministradorLogin.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="frmPrincipal.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="frmsupervisorLogin.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="panelAdministrador.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="frmMantZonas.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="frmMantTrabajadores.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="frmMantSupervisores.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="frmMantAdministradores.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="frmMantTiposGas.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="frmMantUmbrales.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="frmMantDispositivos.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="frmZonaDatos.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="frmTrabajadorDatos.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="frmSupervisorDatos.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="frmAdministradorDatos.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="frmTipoGasDatos.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="frmLEDDatos.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="frmVentiladorDatos.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="frmLectorRFIDDatos.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="frmSensorGasDatos.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="frmUmbralDatos.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="frmElegirTipo.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Utilidades.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmadministradorLogin.resx">
+      <DependentUpon>frmadministradorLogin.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsupervisorLogin.resx">
+      <DependentUpon>frmsupervisorLogin.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="panelAdministrador.resx">
+      <DependentUpon>panelAdministrador.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMantZonas.resx">
+      <DependentUpon>frmMantZonas.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMantTrabajadores.resx">
+      <DependentUpon>frmMantTrabajadores.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMantSupervisores.resx">
+      <DependentUpon>frmMantSupervisores.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMantAdministradores.resx">
+      <DependentUpon>frmMantAdministradores.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMantTiposGas.resx">
+      <DependentUpon>frmMantTiposGas.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMantUmbrales.resx">
+      <DependentUpon>frmMantUmbrales.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMantDispositivos.resx">
+      <DependentUpon>frmMantDispositivos.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmZonaDatos.resx">
+      <DependentUpon>frmZonaDatos.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTrabajadorDatos.resx">
+      <DependentUpon>frmTrabajadorDatos.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSupervisorDatos.resx">
+      <DependentUpon>frmSupervisorDatos.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdministradorDatos.resx">
+      <DependentUpon>frmAdministradorDatos.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTipoGasDatos.resx">
+      <DependentUpon>frmTipoGasDatos.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLEDDatos.resx">
+      <DependentUpon>frmLEDDatos.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVentiladorDatos.resx">
+      <DependentUpon>frmVentiladorDatos.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLectorRFIDDatos.resx">
+      <DependentUpon>frmLectorRFIDDatos.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSensorGasDatos.resx">
+      <DependentUpon>frmSensorGasDatos.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUmbralDatos.resx">
+      <DependentUpon>frmUmbralDatos.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmElegirTipo.resx">
+      <DependentUpon>frmElegirTipo.h</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SigmaController\SigmaController.vcxproj">
+      <Project>{459e338e-7655-f731-36c6-d3ea826b215e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\SigmaModel\SigmaModel.vcxproj">
+      <Project>{82d60c73-6082-5632-17b3-133a8d9e6a48}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

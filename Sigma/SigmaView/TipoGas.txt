@@ -1,0 +1,1 @@
+tipogas01;PruebaGas1;PB1;5

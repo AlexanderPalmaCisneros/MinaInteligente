@@ -1,0 +1,2 @@
+#include "frmSensorGasDatos.h"
+
